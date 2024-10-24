@@ -14,7 +14,7 @@ export default function Home() {
       <MediaPlayer />
       <CommentBox />
       <MediaDescription />
-      <MediaInfo />
+      {/* <MediaInfo /> */}
       <RelatedVideos />
     </main>
   );

@@ -1,18 +1,9 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
+import CustomAvatar from "@/components/CustomElements/CustomAvatar";
 
 const CommentBoxCard = () => {
   return (
     <div className="flex items-center gap-x-2">
-      <Avatar>
-        <AvatarImage
-          className="w-64 rounded-full"
-          src="https://github.com/shadcn.png"
-          alt="avatar"
-        />
-        <AvatarFallback className="bg-purple-3 rounded-full p-4">
-          AV
-        </AvatarFallback>
-      </Avatar>
+      <CustomAvatar />
 
       <div className="max-h-20 overflow-y-hidden">
         <h3>Usuario</h3>
