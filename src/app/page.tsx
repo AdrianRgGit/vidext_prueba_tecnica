@@ -4,10 +4,12 @@ import MediaInfo from "@/components/Home/MediaInfo/MediaInfo";
 import MediaPlayer from "@/components/Home/MediaPlayer/MediaPlayer";
 import RelatedVideos from "@/components/Home/RelatedVideos/RelatedVideos";
 import Header from "@/components/Layout/Header/Header";
+import SideNav from "@/components/Layout/SideNav/SideNav";
 
 export default function Home() {
   return (
-    <main className="grid min-h-screen grid-cols-1 lg:grid-cols-3">
+    <main className="grid min-h-screen grid-cols-1 lg:grid-cols-[6rem_1fr_1fr_1fr] lg:grid-rows-[6rem]">
+      <SideNav />
       <Header />
       <MediaPlayer />
       <Comments />
