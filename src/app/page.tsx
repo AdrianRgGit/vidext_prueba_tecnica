@@ -1,4 +1,4 @@
-import Comments from "@/components/Home/Comments/Comments";
+import CommentBox from "@/components/Home/CommentBox/CommentBox";
 import MediaDescription from "@/components/Home/MediaDescription/MediaDescription";
 import MediaInfo from "@/components/Home/MediaInfo/MediaInfo";
 import MediaPlayer from "@/components/Home/MediaPlayer/MediaPlayer";
@@ -12,7 +12,7 @@ export default function Home() {
       <SideNav />
       <Header />
       <MediaPlayer />
-      <Comments />
+      <CommentBox />
       <MediaDescription />
       <MediaInfo />
       <RelatedVideos />

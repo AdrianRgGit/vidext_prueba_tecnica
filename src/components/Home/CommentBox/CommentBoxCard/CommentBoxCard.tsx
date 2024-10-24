@@ -1,6 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 
-const CommentCard = () => {
+const CommentBoxCard = () => {
   return (
     <div className="flex items-center gap-x-2">
       <Avatar>
@@ -27,4 +27,4 @@ const CommentCard = () => {
   );
 };
 
-export default CommentCard;
+export default CommentBoxCard;
