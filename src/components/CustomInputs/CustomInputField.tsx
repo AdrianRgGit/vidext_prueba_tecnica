@@ -6,23 +6,25 @@ const CustomInputField: FC<CustomInputFieldProps> = ({
   name,
   placeholder,
   label,
-  icon
+  icon,
 }) => {
   return (
-    <div className="w-full">
+    <>
       {label ? (
         <label htmlFor={name} className="text-sm">
           {label}
         </label>
       ) : null}
-      <input
-        name={name}
-        type={type}
-        placeholder={placeholder}
-        className="text-smF h-10 w-full rounded-md px-4 py-2"
-      />
-      {icon}
-    </div>
+      <div className="bg-purple-3/90 flex h-10 w-full gap-x-2 rounded-md px-4 py-2">
+        <input
+          name={name}
+          type={type}
+          placeholder={placeholder}
+          className="w-full bg-transparent text-sm text-white outline-none"
+        />
+        {icon}
+      </div>
+    </>
   );
 };
 

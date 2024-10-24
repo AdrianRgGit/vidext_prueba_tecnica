@@ -3,17 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
+import { Form } from "@/components/ui/form";
 import { Search } from "lucide-react";
 import CustomInputField from "@/components/CustomInputs/CustomInputField";
 
@@ -41,8 +31,7 @@ const SearchBar = () => {
             type="text"
             name="search"
             placeholder="Hoy me apetece ver..."
-            label="Bsucador"
-            icon={<Search />}
+            icon={<Search className="text-white"/>}
           />
         </form>
       </Form>
