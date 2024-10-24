@@ -20,9 +20,9 @@ const CustomInputField: FC<CustomInputFieldProps> = ({
           name={name}
           type={type}
           placeholder={placeholder}
-          className="w-full bg-transparent text-sm text-white outline-none"
+          className="w-full bg-transparent text-sm outline-none placeholder:text-white/50"
         />
-        {icon}
+        <button type="button">{icon}</button>
       </div>
     </>
   );
