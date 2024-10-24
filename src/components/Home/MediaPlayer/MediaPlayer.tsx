@@ -1,7 +1,14 @@
-
 const MediaPlayer = () => {
   return (
-    <section className="col-span-2 bg-green-500">Reproductor video</section>
+    <section className="col-span-2 px-4">
+      <video
+        controls
+        className="border-gray-1/50 h-full w-full rounded-xl border"
+      >
+        <source src="ruta/al/video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </section>
   );
 };
 
