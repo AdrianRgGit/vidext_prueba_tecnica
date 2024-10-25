@@ -3,7 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 import React, { FC } from "react";
 
 const CustomAvatar: FC<CustomAvatarProps> = ({
-  width = "64",
+  width = "12",
   height = "auto",
   src = "https://github.com/shadcn.png",
   alt = "avatar",
@@ -12,7 +12,7 @@ const CustomAvatar: FC<CustomAvatarProps> = ({
   return (
     <Avatar>
       <AvatarImage
-        className={`w-${width} h-${height} rounded-full`}
+        className={`w-${width}  h-${height} rounded-full`}
         src={src}
         alt={alt}
       />
