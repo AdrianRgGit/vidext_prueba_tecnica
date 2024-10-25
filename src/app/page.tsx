@@ -7,13 +7,15 @@ import SideNav from "@/components/Layout/SideNav/SideNav";
 
 export default function Home() {
   return (
-    <main className="grid min-h-screen grid-cols-1 grid-rows-[6rem_32rem] lg:grid-cols-[6rem_1fr_1fr_1fr]">
+    <>
       <SideNav />
-      <Header />
-      <MediaPlayer />
-      <CommentBox />
-      <MediaDescription />
-      <RelatedVideos />
-    </main>
+      <main className="ml-20 grid grid-cols-1 grid-rows-[6rem_32rem] lg:grid-cols-3">
+        <Header />
+        <MediaPlayer />
+        <CommentBox />
+        <MediaDescription />
+        <RelatedVideos />
+      </main>
+    </>
   );
 }
