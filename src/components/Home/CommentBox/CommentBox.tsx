@@ -3,7 +3,7 @@ import CommentBoxHeader from "./CommentBoxHeader/CommentBoxHeader";
 
 const CommentBox = () => {
   return (
-    <section className="bg-purple-2/50 rounded-xl px-2 mx-2">
+    <section className="mx-2 rounded-xl bg-purple-2 px-4">
       <CommentBoxHeader />
       <article className="flex max-h-full flex-col gap-y-4 overflow-y-auto">
         <CommentBoxCard />
