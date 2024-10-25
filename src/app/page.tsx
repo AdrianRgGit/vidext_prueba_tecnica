@@ -1,6 +1,5 @@
 import CommentBox from "@/components/Home/CommentBox/CommentBox";
 import MediaDescription from "@/components/Home/MediaDescription/MediaDescription";
-import MediaInfo from "@/components/Home/MediaInfo/MediaInfo";
 import MediaPlayer from "@/components/Home/MediaPlayer/MediaPlayer";
 import RelatedVideos from "@/components/Home/RelatedVideos/RelatedVideos";
 import Header from "@/components/Layout/Header/Header";
@@ -14,7 +13,6 @@ export default function Home() {
       <MediaPlayer />
       <CommentBox />
       <MediaDescription />
-      {/* <MediaInfo /> */}
       <RelatedVideos />
     </main>
   );
