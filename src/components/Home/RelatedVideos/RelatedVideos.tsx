@@ -6,10 +6,12 @@ const RelatedVideos = () => {
     <section className="rounded-xl px-2 py-8">
       <h3 className="mb-8 text-xl">Videos relacionados</h3>
 
-      <article className="flex flex-col gap-y-4">
-        <RelatedVideoCard />
-        <RelatedVideoCard />
-        <RelatedVideoCard />
+      <article className="space-y-4">
+        <div className="space-y-4">
+          <RelatedVideoCard />
+          <RelatedVideoCard />
+          <RelatedVideoCard />
+        </div>
 
         <Button className="bg-secondary-1 hover:bg-secondary-1/80 w-full py-6">
           Ver más
