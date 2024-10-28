@@ -4,7 +4,7 @@ const MediaPlayer = () => {
       <div className="relative h-0" style={{ paddingBottom: "56.25%" }}>
         <video
           controls
-          className="absolute left-0 top-0 h-full w-full rounded-xl border border-purple-3 object-cover"
+          className="absolute left-0 top-0 h-full w-full rounded-xl object-cover"
         >
           <source src="/vid/vid_1.mp4" type="video/mp4" />
           Your browser does not support the video tag.
