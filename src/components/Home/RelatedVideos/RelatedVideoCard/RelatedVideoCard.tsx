@@ -3,10 +3,10 @@ import React from "react";
 const RelatedVideoCard = () => {
   return (
     <a href="#" className="flex gap-x-2">
-      <picture className="w-96">
+      <picture className="max-h-96 max-w-96">
         <img
           className="w-full rounded-xl"
-          src="https://github.com/shadcn.png"
+          src="https://picsum.photos/384/384"
           alt="video-image"
         />
       </picture>

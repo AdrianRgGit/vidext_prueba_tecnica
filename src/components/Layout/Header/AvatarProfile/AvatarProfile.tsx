@@ -8,10 +8,10 @@ const AvatarProfile = () => {
         <Avatar>
           <AvatarImage
             className="h-12 w-12 rounded-full"
-            src="https://github.com/shadcn.png"
+            src="https://picsum.photos/200/300"
             alt="avatar"
           />
-          <AvatarFallback className="bg-purple-3 rounded-full p-4">
+          <AvatarFallback className="rounded-full bg-purple-3 p-4">
             AV
           </AvatarFallback>
         </Avatar>

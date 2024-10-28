@@ -12,7 +12,7 @@ const RelatedVideos = () => {
         <RelatedVideoCard />
 
         <Button className="bg-secondary-1 hover:bg-secondary-1/80 w-full py-6">
-          Ver todos los videos
+          Ver más
         </Button>
       </article>
     </section>

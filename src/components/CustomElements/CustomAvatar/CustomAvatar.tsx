@@ -5,7 +5,7 @@ import React, { FC } from "react";
 const CustomAvatar: FC<CustomAvatarProps> = ({
   width = "w-20",
   height = "h-auto",
-  src = "https://github.com/shadcn.png",
+  src = "https://picsum.photos/80/80",
   alt = "avatar",
   fallBack = "AV",
 }) => {
