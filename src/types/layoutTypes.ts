@@ -10,3 +10,7 @@ export interface HeaderProps {
   data: UserData | null;
   isLoading: boolean;
 }
+
+export interface AvatarProfileProps {
+  data: UserData | null;
+}
