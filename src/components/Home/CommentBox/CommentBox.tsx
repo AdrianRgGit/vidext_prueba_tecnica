@@ -5,10 +5,14 @@ import { Send } from "lucide-react";
 
 const CommentBox = () => {
   return (
-    <section className="bg-primary-2 mx-2 flex flex-col justify-between rounded-xl px-4 h-full">
+    <section className="bg-primary-2 mx-2 flex flex-col justify-between rounded-xl px-4">
       <div>
         <CommentBoxHeader />
-        <article className="flex max-h-full flex-col gap-y-4 overflow-y-auto">
+        <article className="flex max-h-96 flex-col gap-y-4 overflow-y-auto">
+          <CommentBoxCard />
+          <CommentBoxCard />
+          <CommentBoxCard />
+          <CommentBoxCard />
           <CommentBoxCard />
           <CommentBoxCard />
           <CommentBoxCard />
