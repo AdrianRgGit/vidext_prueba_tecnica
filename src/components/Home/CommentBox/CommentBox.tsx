@@ -4,6 +4,7 @@ import CommentBoxHeader from "./CommentBoxHeader/CommentBoxHeader";
 import { Send } from "lucide-react";
 import { FC } from "react";
 import { CommentBoxProps } from "@/types/homeTypes";
+import { CommentData } from "@/types/dataTypes";
 
 const CommentBox: FC<CommentBoxProps> = ({ data, isLoading }) => {
   return (
@@ -11,7 +12,7 @@ const CommentBox: FC<CommentBoxProps> = ({ data, isLoading }) => {
       <div>
         <CommentBoxHeader data={data} />
         <article className="flex max-h-96 flex-col gap-y-4 overflow-y-auto">
-          {data?.comments.map((comment) => (
+          {data?.comments.map((comment: CommentData) => (
             <CommentBoxCard key={comment.id} data={comment} />
           ))}
         </article>

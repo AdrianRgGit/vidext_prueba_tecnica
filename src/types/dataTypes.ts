@@ -6,18 +6,6 @@ export interface UserData {
   avatar: string;
 }
 
-export interface VidData {
-  id: string;
-  createdAt: string;
-  updatedAt: string;
-  title: string;
-  description: string;
-  url: string;
-  comments: string[];
-  views: number;
-  likes: number;
-}
-
 export interface CommentData {
   id: string;
   createdAt: string;
@@ -25,4 +13,16 @@ export interface CommentData {
   username: string;
   avatar: string;
   comment: string;
+}
+
+export interface VidData {
+  id: string;
+  createdAt: string;
+  updatedAt: string;
+  title: string;
+  description: string;
+  url: string;
+  comments: CommentData[];
+  views: number;
+  likes: number;
 }
