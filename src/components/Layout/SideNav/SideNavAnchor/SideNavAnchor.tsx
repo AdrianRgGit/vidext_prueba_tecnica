@@ -1,13 +1,17 @@
-import { Home } from "lucide-react";
-import React from "react";
+import { SideNavAnchorProps } from "@/types/sideNav";
+import React, { FC } from "react";
 
-const SideNavAnchor = () => {
+const SideNavAnchor: FC<SideNavAnchorProps> = ({
+  icon,
+  enabled = true,
+  active,
+}) => {
   return (
     <a
       href="#"
-      className="bg-primary-2 rounded-xl p-3 transition-colors duration-200 hover:bg-sky-1"
+      className={`hover:bg-sky-1 rounded-xl p-3 transition-colors duration-200 ${enabled ? "cursor-pointer" : "cursor-not-allowed"} ${active ? "bg-sky-1" : "bg-primary-2"}`}
     >
-      <Home />
+      {icon}
     </a>
   );
 };
