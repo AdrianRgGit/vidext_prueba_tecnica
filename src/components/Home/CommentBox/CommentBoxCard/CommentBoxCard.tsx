@@ -1,4 +1,4 @@
-import CustomAvatar from "@/components/CustomElements/CustomAvatar";
+import CustomAvatar from "@/components/CustomElements/CustomAvatar/CustomAvatar";
 
 const CommentBoxCard = () => {
   return (
