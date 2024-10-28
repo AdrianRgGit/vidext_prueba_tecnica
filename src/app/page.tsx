@@ -9,15 +9,18 @@ import SideNav from "@/components/Layout/SideNav/SideNav";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [videos, setVideos] = useState(null);
   const [user, setUsers] = useState(null);
+  const [videos, setVideos] = useState(null);
+  const [videoSelected, setVideoSelected] = useState(null);
 
-  const [loadingVid, setLoadingVid] = useState(false);
   const [loadingUser, setLoadingUser] = useState(false);
+  const [loadingVid, setLoadingVid] = useState(false);
+  const [loadingVideoSelected, setLoadingVideoSelected] = useState(false);
 
   useEffect(() => {
     setLoadingUser(true);
     setLoadingVid(true);
+    setLoadingVideoSelected(true);
 
     // NOTE: Fetch de user
     fetch("/mocks/user.json")
@@ -41,6 +44,18 @@ export default function Home() {
         console.error("Error al cargar el mock:", error);
         setLoadingVid(false);
       });
+
+    // NOTE: Video seleccionado
+    fetch("/mocks/vidSelected.json")
+      .then((response) => response.json())
+      .then((data) => {
+        setVideoSelected(data);
+        setLoadingVideoSelected(false);
+      })
+      .catch((error) => {
+        console.error("Error al cargar el mock:", error);
+        setLoadingVideoSelected(false);
+      });
   }, []);
 
   return (
@@ -48,8 +63,8 @@ export default function Home() {
       <SideNav />
       <main className="ml-20 grid grid-cols-1 grid-rows-[6rem_32rem] lg:grid-cols-3">
         <Header data={user} isLoading={loadingUser} />
-        <MediaPlayer />
-        <CommentBox />
+        <MediaPlayer data={videoSelected} isLoading={loadingVideoSelected} />
+        <CommentBox data={videoSelected} isLoading={loadingVideoSelected} />
         <MediaDescription />
         <RelatedVideos />
       </main>

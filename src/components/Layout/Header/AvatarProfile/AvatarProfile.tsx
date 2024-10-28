@@ -7,9 +7,9 @@ const AvatarProfile: FC<AvatarProfileProps> = ({ data }) => {
   return (
     <article className="flex items-center gap-x-8">
       <div className="flex items-center gap-x-2">
-        <CustomAvatar width="w-12" />
+        <CustomAvatar width="w-12" src={data?.avatar} />
 
-        <p className="text-sm">Usuario</p>
+        <p className="text-sm">{data?.username}</p>
       </div>
 
       <button type="button">

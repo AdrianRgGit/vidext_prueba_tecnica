@@ -1,0 +1,52 @@
+{
+  "id": 1,
+  "createdAt": "2023-01-01T00:00:00.000Z",
+  "updatedAt": "2023-01-01T00:00:00.000Z",
+  "title": "The 10 Best JavaScript Projects",
+  "description": "The 10 Best JavaScript Projects",
+  "url": "/vid/vid_1.mp4",
+  "comments": [
+    {
+      "id": 1,
+      "createdAt": "2023-01-01T00:00:00.000Z",
+      "updatedAt": "2023-01-01T00:00:00.000Z",
+      "username": "Paco López",
+      "avatar": "https://picsum.photos/60/60",
+      "comment": "comment 1"
+    },
+    {
+      "id": 2,
+      "createdAt": "2023-01-01T00:00:00.000Z",
+      "updatedAt": "2023-01-01T00:00:00.000Z",
+      "username": "Adrián Ramírez",
+      "avatar": "https://picsum.photos/60/60",
+      "comment": "comment 2"
+    },
+    {
+      "id": 3,
+      "createdAt": "2023-01-01T00:00:00.000Z",
+      "updatedAt": "2023-01-01T00:00:00.000Z",
+      "username": "Lucas Tormo",
+      "avatar": "https://picsum.photos/60/60",
+      "comment": "comment 3"
+    },
+    {
+      "id": 4,
+      "createdAt": "2023-01-01T00:00:00.000Z",
+      "updatedAt": "2023-01-01T00:00:00.000Z",
+      "username": "Francisco García",
+      "avatar": "https://picsum.photos/60/60",
+      "comment": "comment 4"
+    },
+    {
+      "id": 5,
+      "createdAt": "2023-01-01T00:00:00.000Z",
+      "updatedAt": "2023-01-01T00:00:00.000Z",
+      "username": "Laura Gómez",
+      "avatar": "https://picsum.photos/60/60",
+      "comment": "comment 5"
+    }
+  ],
+  "views": 1000,
+  "likes": 100
+}

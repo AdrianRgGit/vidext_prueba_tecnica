@@ -3,7 +3,7 @@ export interface UserData {
   createdAt: string;
   updatedAt: string;
   username: string;
-  profile_pic: string;
+  avatar: string;
 }
 
 export interface VidData {
@@ -16,4 +16,13 @@ export interface VidData {
   comments: string[];
   views: number;
   likes: number;
+}
+
+export interface CommentData {
+  id: string;
+  createdAt: string;
+  updatedAt: string;
+  username: string;
+  avatar: string;
+  comment: string;
 }

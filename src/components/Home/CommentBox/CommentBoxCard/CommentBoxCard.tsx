@@ -1,18 +1,15 @@
 import CustomAvatar from "@/components/CustomElements/CustomAvatar/CustomAvatar";
+import { CommentBoxCardProps } from "@/types/homeTypes";
+import { FC } from "react";
 
-const CommentBoxCard = () => {
+const CommentBoxCard: FC<CommentBoxCardProps> = ({ data }) => {
   return (
     <div className="flex items-center gap-x-2">
-      <CustomAvatar width="w-64" />
+      <CustomAvatar width="min-w-16" src={data?.avatar} />
 
       <div className="max-h-20 overflow-y-hidden">
-        <h3>Usuario</h3>
-        <p className="text-sm text-gray-1">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime modi
-          incidunt quo dolores recusandae? Assumenda earum libero aut, aperiam
-          suscipit delectus consequuntur aspernatur, unde quam totam iusto iure
-          ipsum praesentium!
-        </p>
+        <h3>{data?.username}</h3>
+        <p className="text-sm text-gray-1">{data?.comment}</p>
       </div>
     </div>
   );

@@ -21,6 +21,8 @@ const config: Config = {
         "red-1": "#E66061",
         "sky-1": "#31A1D7",
         "gray-1": "#847F92",
+
+        "skeleton-1": "#847F92",
       },
       borderRadius: {
         lg: "var(--radius)",
