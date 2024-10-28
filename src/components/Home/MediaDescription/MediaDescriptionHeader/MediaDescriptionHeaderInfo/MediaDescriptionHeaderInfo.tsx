@@ -21,7 +21,7 @@ const MediaDescriptionHeaderInfo = () => {
           <p>Like</p>
         </Button>
 
-        <Button className="flex w-28 items-center justify-center gap-x-2 bg-blue-1 hover:bg-blue-1/80">
+        <Button className="flex w-28 items-center justify-center gap-x-2 bg-sky-1 hover:bg-sky-1/80">
           <Share2 />
           <p>Share</p>
         </Button>
