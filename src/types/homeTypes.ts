@@ -23,3 +23,13 @@ export interface CommentBoxHeaderProps {
 export interface CommentBoxCardProps {
   data: CommentData | null;
 }
+
+// NOTE: Media Description
+export interface MediaDescriptionProps {
+  data: VidData | null;
+  isLoading: boolean;
+}
+
+export interface MediaDescriptionChildProps {
+  data: VidData | null;
+}

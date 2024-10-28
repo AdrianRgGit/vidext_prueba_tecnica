@@ -19,10 +19,13 @@ export interface VidData {
   id: string;
   createdAt: string;
   updatedAt: string;
+  username: string;
+  avatar: string;
   title: string;
   description: string;
   url: string;
   comments: CommentData[];
   views: number;
   likes: number;
+  followers: string;
 }

@@ -1,12 +1,16 @@
 import CustomAvatar from "@/components/CustomElements/CustomAvatar/CustomAvatar";
+import { MediaDescriptionChildProps } from "@/types/homeTypes";
+import { FC } from "react";
 
-const MediaDescriptionHeaderProfile = () => {
+const MediaDescriptionHeaderProfile: FC<MediaDescriptionChildProps> = ({
+  data,
+}) => {
   return (
     <article className="flex items-center gap-x-2">
-      <CustomAvatar />
+      <CustomAvatar src={data?.avatar} />
       <div>
-        <p>Usuario</p>
-        <small className="text-gray-1">1231321 seguidores</small>
+        <p>{data?.username}</p>
+        <small className="text-gray-1">{data?.followers}</small>
       </div>
     </article>
   );

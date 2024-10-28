@@ -1,11 +1,13 @@
+import { FC } from "react";
 import MediaDescriptionContent from "./MediaDescriptionContent/MediaDescriptionContent";
 import MediaDescriptionHeader from "./MediaDescriptionHeader/MediaDescriptionProfile";
+import { MediaDescriptionProps } from "@/types/homeTypes";
 
-const MediaDescription = () => {
+const MediaDescription: FC<MediaDescriptionProps> = ({ data, isLoading }) => {
   return (
     <section className="col-span-2 px-4 py-8">
-      <MediaDescriptionHeader />
-      <MediaDescriptionContent />
+      <MediaDescriptionHeader data={data} />
+      <MediaDescriptionContent data={data} />
     </section>
   );
 };

@@ -4,19 +4,19 @@ import React, { FC } from "react";
 
 const CustomAvatar: FC<CustomAvatarProps> = ({
   width = "w-20",
-  height = "h-auto",
-  src = "https://picsum.photos/80/80",
+  height = "h-20",
+  src,
   alt = "avatar",
   fallBack = "AV",
 }) => {
   return (
-    <Avatar>
+    <Avatar className={`${width} ${height} aspect-square`}>
       <AvatarImage
-        className={`${width} ${height} rounded-full`}
+        className="h-full w-full rounded-full object-cover"
         src={src}
         alt={alt}
       />
-      <AvatarFallback className="rounded-full bg-purple-3 p-4">
+      <AvatarFallback className="bg-purple-3 flex h-full w-full items-center justify-center rounded-full">
         {fallBack}
       </AvatarFallback>
     </Avatar>

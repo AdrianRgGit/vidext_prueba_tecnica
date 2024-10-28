@@ -1,12 +1,13 @@
-import React from "react";
+import React, { FC } from "react";
 import MediaDescriptionHeaderProfile from "./MediaDescriptionHeaderProfile/MediaDescriptionHeaderProfile";
 import MediaDescriptionHeaderInfo from "./MediaDescriptionHeaderInfo/MediaDescriptionHeaderInfo";
+import { MediaDescriptionChildProps } from "@/types/homeTypes";
 
-const MediaDescriptionHeader = () => {
+const MediaDescriptionHeader: FC<MediaDescriptionChildProps> = ({ data }) => {
   return (
     <div className="mb-4 flex items-center justify-between">
-      <MediaDescriptionHeaderProfile />
-      <MediaDescriptionHeaderInfo />
+      <MediaDescriptionHeaderProfile data={data} />
+      <MediaDescriptionHeaderInfo data={data} />
     </div>
   );
 };

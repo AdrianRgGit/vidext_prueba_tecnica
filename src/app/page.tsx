@@ -65,7 +65,10 @@ export default function Home() {
         <Header data={user} isLoading={loadingUser} />
         <MediaPlayer data={videoSelected} isLoading={loadingVideoSelected} />
         <CommentBox data={videoSelected} isLoading={loadingVideoSelected} />
-        <MediaDescription />
+        <MediaDescription
+          data={videoSelected}
+          isLoading={loadingVideoSelected}
+        />
         <RelatedVideos />
       </main>
     </>

@@ -1,27 +1,11 @@
-import React from "react";
+import { MediaDescriptionChildProps } from "@/types/homeTypes";
+import React, { FC } from "react";
 
-const MediaDescriptionContent = () => {
+const MediaDescriptionContent: FC<MediaDescriptionChildProps> = ({ data }) => {
   return (
     <article>
-      <h3 className="mb-4 text-xl">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est debitis,
-        recusandae, quae expedita dicta adipisci
-      </h3>
-      <p className="text-gray-1">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, ab?
-        Molestias, magnam, rem nisi velit doloremque hic temporibus accusamus
-        repellat, non voluptate quod reiciendis illo quis earum quo vel.
-        Tenetur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
-        explicabo numquam officiis dolor commodi. Molestiae accusamus fugit
-        velit ipsa commodi similique quae dolore, ipsum possimus corrupti
-        voluptatum assumenda tempore ipsam. Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Sint, ab? Molestias, magnam, rem nisi
-        velit doloremque hic temporibus accusamus repellat, non voluptate quod
-        reiciendis illo quis earum quo vel. Tenetur? Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Quam explicabo numquam officiis dolor
-        commodi. Molestiae accusamus fugit velit ipsa commodi similique quae
-        dolore, ipsum possimus corrupti voluptatum assumenda tempore ipsam.
-      </p>
+      <h3 className="mb-4 text-xl">{data?.title}</h3>
+      <p className="text-gray-1">{data?.description}</p>
     </article>
   );
 };
