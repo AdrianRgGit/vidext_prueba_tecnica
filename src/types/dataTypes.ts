@@ -24,6 +24,7 @@ export interface VidData {
   title: string;
   description: string;
   url: string;
+  banner: string;
   comments: CommentData[];
   views: number;
   likes: number;

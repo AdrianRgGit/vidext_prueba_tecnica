@@ -1,27 +1,25 @@
-import React from "react";
+import { RelatedVideosChildProps } from "@/types/homeTypes";
+import React, { FC } from "react";
 
-const RelatedVideoCard = () => {
+const RelatedVideoCard: FC<RelatedVideosChildProps> = ({ video }) => {
   return (
-    <a href="#" className="flex gap-x-2">
-      <picture className="max-h-96 max-w-96">
+    <a href="#" className="flex gap-x-4">
+      <picture className="h-32 w-32">
         <img
-          className="w-full rounded-xl"
-          src="https://picsum.photos/384/384"
-          alt="video-image"
+          className="h-full w-full rounded-xl object-cover"
+          src={video?.banner}
+          alt={video?.title}
         />
       </picture>
 
       <div className="flex flex-col justify-between">
         <div>
-          <p>Título del vídeo</p>
-          <small className="text-gray-1">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique
-            praesentium nihil eius voluptates praesentium nihil eius voluptates
-          </small>
+          <p>{video?.title}</p>
+          <small className="text-gray-1">{video?.description}</small>
         </div>
 
         <div className="flex gap-x-2">
-          <small className="text-gray-1">84530 visualizaciones</small>
+          <small className="text-gray-1">{video?.views}</small>
         </div>
       </div>
     </a>

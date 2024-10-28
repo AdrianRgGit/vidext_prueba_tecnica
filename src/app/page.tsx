@@ -69,7 +69,7 @@ export default function Home() {
           data={videoSelected}
           isLoading={loadingVideoSelected}
         />
-        <RelatedVideos />
+        <RelatedVideos data={videos} isLoading={loadingVid} />
       </main>
     </>
   );

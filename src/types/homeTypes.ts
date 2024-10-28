@@ -33,3 +33,11 @@ export interface MediaDescriptionProps {
 export interface MediaDescriptionChildProps {
   data: VidData | null;
 }
+
+export interface RelatedVideosProps {
+  data: VidData[] | null;
+  isLoading: boolean;
+}
+export interface RelatedVideosChildProps {
+  video: VidData | null;
+}

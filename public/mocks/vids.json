@@ -6,6 +6,7 @@
     "title": "The 10 Best JavaScript Projects",
     "description": "The 10 Best JavaScript Projects",
     "url": "https://www.youtube.com/watch?v=1Qm0kGmEYjw",
+    "banner": "/images/profiles/profile_1.webp",
     "comments": ["comment 1", "comment 2", "comment 3"],
     "views": 1000,
     "likes": 100
@@ -17,6 +18,7 @@
     "title": "Cómo crear un juego con Phaser",
     "description": "Tutorial para crear un juego con Phaser",
     "url": "https://www.youtube.com/watch?v=2Qm0kGmEYjw",
+    "banner": "/images/profiles/profile_2.webp",
     "comments": ["comment 4", "comment 5"],
     "views": 500,
     "likes": 50
@@ -28,6 +30,7 @@
     "title": "Introducción a React",
     "description": "Introducción a la biblioteca de React",
     "url": "https://www.youtube.com/watch?v=3Qm0kGmEYjw",
+    "banner": "/images/profiles/profile_3.webp",
     "comments": ["comment 6", "comment 7", "comment 8"],
     "views": 2000,
     "likes": 200
@@ -39,6 +42,7 @@
     "title": "Cómo crear un sitio web con WordPress",
     "description": "Tutorial para crear un sitio web con WordPress",
     "url": "https://www.youtube.com/watch?v=4Qm0kGmEYjw",
+    "banner": "/images/profiles/profile_4.webp",
     "comments": ["comment 9", "comment 10"],
     "views": 1500,
     "likes": 150
@@ -50,6 +54,7 @@
     "title": "Introducción a Node.js",
     "description": "Introducción a la plataforma de Node.js",
     "url": "https://www.youtube.com/watch?v=5Qm0kGmEYjw",
+    "banner": "/images/profiles/profile_5.webp",
     "comments": ["comment 11", "comment 12", "comment 13"],
     "views": 2500,
     "likes": 250
@@ -61,6 +66,7 @@
     "title": "Cómo crear un chatbot con Dialogflow",
     "description": "Tutorial para crear un chatbot con Dialogflow",
     "url": "https://www.youtube.com/watch?v=6Qm0kGmEYjw",
+    "banner": "/images/profiles/profile_1.webp",
     "comments": ["comment 14", "comment 15"],
     "views": 1000,
     "likes": 100
@@ -72,6 +78,7 @@
     "title": "Introducción a Angular",
     "description": "Introducción a la plataforma de Angular",
     "url": "https://www.youtube.com/watch?v=7Qm0kGmEYjw",
+    "banner": "/images/profiles/profile_2.webp",
     "comments": ["comment 16", "comment 17", "comment 18"],
     "views": 3000,
     "likes": 300
