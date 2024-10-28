@@ -31,7 +31,7 @@ const SearchBar = () => {
             type="text"
             name="search"
             placeholder="Hoy me apetece ver..."
-            icon={<Search />}
+            icon={<Search stroke="gray" />}
           />
         </form>
       </Form>

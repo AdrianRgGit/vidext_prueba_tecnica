@@ -3,7 +3,7 @@ import MediaDescriptionHeader from "./MediaDescriptionHeader/MediaDescriptionPro
 
 const MediaDescription = () => {
   return (
-    <section className="col-span-2 px-4 py-4">
+    <section className="col-span-2 px-4 py-8">
       <MediaDescriptionHeader />
       <MediaDescriptionContent />
     </section>

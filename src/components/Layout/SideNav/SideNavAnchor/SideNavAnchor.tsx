@@ -5,7 +5,7 @@ const SideNavAnchor = () => {
   return (
     <a
       href="#"
-      className="rounded-xl bg-purple-2 p-4 transition-opacity duration-200 hover:opacity-50"
+      className="bg-primary-2 rounded-xl p-3 transition-colors duration-200 hover:bg-blue-1"
     >
       <Home />
     </a>

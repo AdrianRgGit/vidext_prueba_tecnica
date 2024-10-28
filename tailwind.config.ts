@@ -13,11 +13,18 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
 
-        "blue-1": "#1A1F4D",
-        
         "purple-2": "#8A2BE2",
         "purple-3": "#D8BFD8",
         "purple-4": "#DA70D6",
+
+        "primary-1": "#1F1D2B",
+        "primary-2": "#262837",
+
+        "secondary-1": "#6D5ECF",
+
+        "red-1": "#E66061",
+        "blue-1": "#31A1D7",
+        "gray-1": "#847F92",
       },
       borderRadius: {
         lg: "var(--radius)",

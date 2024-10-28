@@ -6,7 +6,7 @@ const MediaDescriptionHeaderProfile = () => {
       <CustomAvatar />
       <div>
         <p>Usuario</p>
-        <small>1231321 seguidores</small>
+        <small className="text-gray-1">1231321 seguidores</small>
       </div>
     </article>
   );

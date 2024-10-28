@@ -4,4 +4,5 @@ export interface CustomInputFieldProps {
     placeholder: string;
     label?: string;
     icon?: React.ReactNode;
+    bg?: string;
 }

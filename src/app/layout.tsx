@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} ${geistSans.variable} ${geistMono.variable} bg-blue-1 max-h-screen text-white antialiased`}
+        className={`${poppins.className} ${geistSans.variable} ${geistMono.variable} bg-primary-1 max-h-screen text-white antialiased`}
       >
         {children}
       </body>
