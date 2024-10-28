@@ -1,4 +1,4 @@
-import { SideNavAnchorProps } from "@/types/sideNav";
+import { SideNavAnchorProps } from "@/types/layoutTypes";
 import React, { FC } from "react";
 
 const SideNavAnchor: FC<SideNavAnchorProps> = ({

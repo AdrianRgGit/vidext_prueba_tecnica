@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "createdAt": "2023-01-01T00:00:00.000Z",
+    "updatedAt": "2023-01-01T00:00:00.000Z",
+    "title": "The 10 Best JavaScript Projects",
+    "description": "The 10 Best JavaScript Projects",
+    "url": "https://www.youtube.com/watch?v=1Qm0kGmEYjw",
+    "comments": ["comment 1", "comment 2", "comment 3"],
+    "views": 1000,
+    "likes": 100
+  },
+  {
+    "id": 2,
+    "createdAt": "2023-01-05T00:00:00.000Z",
+    "updatedAt": "2023-01-05T00:00:00.000Z",
+    "title": "Cómo crear un juego con Phaser",
+    "description": "Tutorial para crear un juego con Phaser",
+    "url": "https://www.youtube.com/watch?v=2Qm0kGmEYjw",
+    "comments": ["comment 4", "comment 5"],
+    "views": 500,
+    "likes": 50
+  },
+  {
+    "id": 3,
+    "createdAt": "2023-01-10T00:00:00.000Z",
+    "updatedAt": "2023-01-10T00:00:00.000Z",
+    "title": "Introducción a React",
+    "description": "Introducción a la biblioteca de React",
+    "url": "https://www.youtube.com/watch?v=3Qm0kGmEYjw",
+    "comments": ["comment 6", "comment 7", "comment 8"],
+    "views": 2000,
+    "likes": 200
+  },
+  {
+    "id": 4,
+    "createdAt": "2023-01-15T00:00:00.000Z",
+    "updatedAt": "2023-01-15T00:00:00.000Z",
+    "title": "Cómo crear un sitio web con WordPress",
+    "description": "Tutorial para crear un sitio web con WordPress",
+    "url": "https://www.youtube.com/watch?v=4Qm0kGmEYjw",
+    "comments": ["comment 9", "comment 10"],
+    "views": 1500,
+    "likes": 150
+  },
+  {
+    "id": 5,
+    "createdAt": "2023-01-20T00:00:00.000Z",
+    "updatedAt": "2023-01-20T00:00:00.000Z",
+    "title": "Introducción a Node.js",
+    "description": "Introducción a la plataforma de Node.js",
+    "url": "https://www.youtube.com/watch?v=5Qm0kGmEYjw",
+    "comments": ["comment 11", "comment 12", "comment 13"],
+    "views": 2500,
+    "likes": 250
+  },
+  {
+    "id": 6,
+    "createdAt": "2023-01-25T00:00:00.000Z",
+    "updatedAt": "2023-01-25T00:00:00.000Z",
+    "title": "Cómo crear un chatbot con Dialogflow",
+    "description": "Tutorial para crear un chatbot con Dialogflow",
+    "url": "https://www.youtube.com/watch?v=6Qm0kGmEYjw",
+    "comments": ["comment 14", "comment 15"],
+    "views": 1000,
+    "likes": 100
+  },
+  {
+    "id": 7,
+    "createdAt": "2023-02-01T00:00:00.000Z",
+    "updatedAt": "2023-02-01T00:00:00.000Z",
+    "title": "Introducción a Angular",
+    "description": "Introducción a la plataforma de Angular",
+    "url": "https://www.youtube.com/watch?v=7Qm0kGmEYjw",
+    "comments": ["comment 16", "comment 17", "comment 18"],
+    "views": 3000,
+    "likes": 300
+  }
+]
