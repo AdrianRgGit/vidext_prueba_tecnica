@@ -10,7 +10,7 @@ const MediaDescriptionHeaderProfile: FC<MediaDescriptionChildProps> = ({
       <CustomAvatar src={data?.avatar} />
       <div>
         <p>{data?.username}</p>
-        <small className="text-gray-1">{data?.followers}</small>
+        <small className="text-gray-1">{data?.followers} seguidores</small>
       </div>
     </article>
   );

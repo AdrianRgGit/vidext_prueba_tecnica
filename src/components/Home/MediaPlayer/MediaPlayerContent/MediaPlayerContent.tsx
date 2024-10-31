@@ -5,6 +5,7 @@ const MediaPlayerContent: FC<MediaPlayerContentProps> = ({ data }) => {
   return (
     <div className="relative h-full">
       <video
+        key={data?.id}
         controls
         className="absolute left-0 top-0 h-full w-full rounded-xl object-cover"
       >

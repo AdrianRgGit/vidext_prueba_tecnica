@@ -20,6 +20,7 @@ export interface VidData {
   title: string;
   description: string;
   url: string;
+  banner: string;
   views: number;
   likes: number;
   followers: number;
