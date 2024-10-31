@@ -8,7 +8,7 @@ const MediaPlayerContent: FC<MediaPlayerContentProps> = ({ data }) => {
         controls
         className="absolute left-0 top-0 h-full w-full rounded-xl object-cover"
       >
-        <source src={data?.url} type="video/mp4" />
+        <source key={data?.id} src={data?.url} type="video/mp4" />
         Tu navegador no soporta este tipo de archivo.
       </video>
     </div>

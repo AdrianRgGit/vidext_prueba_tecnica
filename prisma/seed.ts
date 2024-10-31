@@ -3,8 +3,22 @@ const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
 async function main() {
-  await prisma.comment.deleteMany({});
-  await prisma.video.deleteMany({});
+  const commentsCount = await prisma.comment.count();
+  const videosCount = await prisma.video.count();
+
+  if (commentsCount > 0) {
+    await prisma.comment.deleteMany({});
+    console.log("Deleted all comments.");
+  } else {
+    console.log("No comments to delete.");
+  }
+
+  if (videosCount > 0) {
+    await prisma.video.deleteMany({});
+    console.log("Deleted all videos.");
+  } else {
+    console.log("No videos to delete.");
+  }
 
   await prisma.video.createMany({
     data: [

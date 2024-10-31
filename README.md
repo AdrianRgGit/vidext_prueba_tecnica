@@ -8,10 +8,14 @@ npx prisma migrate dev --name init
 
 Generate migration
 
+```bash
+npx prisma generate
+```
+
 Seed (configured script in package.json)
 
 ```bash
-npx prisma generate
+npx run seed
 ```
 
 Prisma Studio
