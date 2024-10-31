@@ -16,6 +16,7 @@ model Video {
   title       String
   description String
   url         String
+  banner      String
   views       Int       @default(0)
   likes       Int       @default(0)
   followers   Int       @default(0)

@@ -6,7 +6,6 @@ async function main() {
   await prisma.comment.deleteMany({});
   await prisma.video.deleteMany({});
 
-  // Crear videos y guardar los registros en un array
   await prisma.video.createMany({
     data: [
       {
@@ -15,6 +14,7 @@ async function main() {
         title: "The 10 Best JavaScript Projects",
         description: "The 10 Best JavaScript Projects",
         url: "/vid/vid_1.mp4",
+        banner: "/images/profiles/profile_1.webp",
         views: 1000,
         likes: 100,
         followers: 550,

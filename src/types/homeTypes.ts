@@ -37,7 +37,9 @@ export interface MediaDescriptionChildProps {
 export interface RelatedVideosProps {
   data: VidData[] | null;
   isLoading: boolean;
+  setSelectedVideo: (videoId: number) => void;
 }
 export interface RelatedVideosChildProps {
   video: VidData | null;
+  setSelectedVideo: (videoId: number) => void;
 }
