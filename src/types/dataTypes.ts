@@ -7,26 +7,21 @@ export interface UserData {
 }
 
 export interface CommentData {
-  id: string;
-  createdAt: string;
-  updatedAt: string;
+  id: number;
   username: string;
   avatar: string;
   comment: string;
 }
 
 export interface VidData {
-  id: string;
-  createdAt: string;
-  updatedAt: string;
+  id: number;
   username: string;
   avatar: string;
   title: string;
   description: string;
   url: string;
-  banner: string;
-  comments: CommentData[];
   views: number;
   likes: number;
-  followers: string;
+  followers: number;
+  comments: Comment[];
 }
