@@ -19,8 +19,8 @@ const SearchBar = () => {
     },
   });
 
-  const onSubmit = (values: z.infer<typeof searchSchema>) => {
-    console.log(values);
+  const onSubmit = () => {
+    window.alert("Funcionalidad no disponible, disculpen las molestias");
   };
 
   return (

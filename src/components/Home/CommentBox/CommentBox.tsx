@@ -28,6 +28,7 @@ const CommentBox: FC<CommentBoxProps> = ({ data, isLoading }) => {
         <button
           type="button"
           className="flex items-center justify-center rounded-full bg-secondary-1 p-3"
+          onClick={() => {window.alert("Funcionalidad no disponible, disculpen las molestias")}}
         >
           <Send size={16} fill="white" />
         </button>

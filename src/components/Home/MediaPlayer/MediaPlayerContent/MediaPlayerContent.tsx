@@ -7,6 +7,7 @@ const MediaPlayerContent: FC<MediaPlayerContentProps> = ({ data }) => {
       <video
         key={data?.id}
         controls
+        autoPlay
         className="absolute left-0 top-0 h-full w-full rounded-xl object-cover"
       >
         <source key={data?.id} src={data?.url} type="video/mp4" />

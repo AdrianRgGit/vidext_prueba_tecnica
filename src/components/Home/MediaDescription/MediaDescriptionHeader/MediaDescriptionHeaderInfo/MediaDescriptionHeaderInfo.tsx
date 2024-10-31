@@ -20,12 +20,26 @@ const MediaDescriptionHeaderInfo: FC<MediaDescriptionChildProps> = ({
       </div>
 
       <div className="flex gap-x-2">
-        <Button className="flex w-28 items-center justify-center gap-x-2 bg-red-1 hover:bg-red-1/80">
+        <Button
+          onClick={() => {
+            window.alert(
+              "Funcionalidad no disponible, disculpen las molestias",
+            );
+          }}
+          className="flex w-28 items-center justify-center gap-x-2 bg-red-1 hover:bg-red-1/80"
+        >
           <Heart />
           <p>Like</p>
         </Button>
 
-        <Button className="flex w-28 items-center justify-center gap-x-2 bg-sky-1 hover:bg-sky-1/80">
+        <Button
+          onClick={() => {
+            window.alert(
+              "Funcionalidad no disponible, disculpen las molestias",
+            );
+          }}
+          className="flex w-28 items-center justify-center gap-x-2 bg-sky-1 hover:bg-sky-1/80"
+        >
           <Share2 />
           <p>Share</p>
         </Button>
