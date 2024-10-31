@@ -1,9 +1,16 @@
 import { RelatedVideosChildProps } from "@/types/homeTypes";
 import React, { FC } from "react";
 
-const RelatedVideoCard: FC<RelatedVideosChildProps> = ({ video }) => {
+const RelatedVideoCard: FC<RelatedVideosChildProps> = ({
+  video,
+  setSelectedVideo,
+}) => {
   return (
-    <a href="#" className="flex gap-x-4">
+    <button
+      type="button"
+      onClick={() => setSelectedVideo(video?.id)}
+      className="flex gap-x-4"
+    >
       <picture className="h-32 w-32">
         <img
           className="h-full w-full rounded-xl object-cover"
@@ -22,7 +29,7 @@ const RelatedVideoCard: FC<RelatedVideosChildProps> = ({ video }) => {
           <small className="text-gray-1">{video?.views}</small>
         </div>
       </div>
-    </a>
+    </button>
   );
 };
 

@@ -3,7 +3,11 @@ import RelatedVideoCard from "./RelatedVideoCard/RelatedVideoCard";
 import { FC, useState } from "react";
 import { RelatedVideosProps } from "@/types/homeTypes";
 
-const RelatedVideos: FC<RelatedVideosProps> = ({ data, isLoading }) => {
+const RelatedVideos: FC<RelatedVideosProps> = ({
+  data,
+  isLoading,
+  setSelectedVideo,
+}) => {
   const [visibleCount, setVisibleCount] = useState(3);
 
   const handleLoadMore = () => {
@@ -14,6 +18,8 @@ const RelatedVideos: FC<RelatedVideosProps> = ({ data, isLoading }) => {
     setVisibleCount(3);
   };
 
+  if (isLoading) return <p>Loading related videos...</p>;
+
   return (
     <section className="rounded-xl px-2 py-8">
       <h3 className="mb-8 text-xl">Videos relacionados</h3>
@@ -22,8 +28,12 @@ const RelatedVideos: FC<RelatedVideosProps> = ({ data, isLoading }) => {
         <div className="space-y-4">
           {data
             ?.slice(0, visibleCount)
-            .map((video, index) => (
-              <RelatedVideoCard key={index} video={video} />
+            .map((video) => (
+              <RelatedVideoCard
+                key={video.id}
+                video={video}
+                setSelectedVideo={setSelectedVideo}
+              />
             ))}
         </div>
 

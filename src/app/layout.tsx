@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import Provider from "./_trpc/Provider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -34,9 +35,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} ${geistSans.variable} ${geistMono.variable} bg-primary-1 max-h-screen text-white antialiased`}
+        className={`${poppins.className} ${geistSans.variable} ${geistMono.variable} max-h-screen bg-primary-1 text-white antialiased`}
       >
-        {children}
+        <Provider>{children}</Provider>
       </body>
     </html>
   );
