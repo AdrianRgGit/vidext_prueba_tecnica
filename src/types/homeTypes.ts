@@ -22,6 +22,7 @@ export interface CommentBoxHeaderProps {
 
 export interface CommentBoxCardProps {
   data: CommentData | null;
+  isLoading: boolean;
 }
 
 // NOTE: Media Description
@@ -42,4 +43,5 @@ export interface RelatedVideosProps {
 export interface RelatedVideosChildProps {
   video: VidData | null;
   setSelectedVideo: (videoId: number) => void;
+  isLoading: boolean;
 }

@@ -8,12 +8,14 @@ import Header from "@/components/Layout/Header/Header";
 import SideNav from "@/components/Layout/SideNav/SideNav";
 import { useEffect, useState } from "react";
 import { trpc } from "./_trpc/client";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function Home() {
   const [user, setUsers] = useState(null);
   const [videoSelected, setVideoSelected] = useState(null);
-  const { data: videos, isLoading, error } = trpc.getVideos.useQuery();
   const [loadingUser, setLoadingUser] = useState(false);
+
+  const { data: videos, isLoading, error } = trpc.getVideos.useQuery();
 
   useEffect(() => {
     setLoadingUser(true);
@@ -54,7 +56,7 @@ export default function Home() {
             <MediaDescription data={videoSelected} isLoading={isLoading} />
           </>
         ) : (
-          <p>No video selected</p>
+          <Skeleton className="h-full w-full rounded-xl bg-skeleton-1" />
         )}
 
         <RelatedVideos

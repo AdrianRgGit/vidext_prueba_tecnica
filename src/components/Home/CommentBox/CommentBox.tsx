@@ -13,7 +13,7 @@ const CommentBox: FC<CommentBoxProps> = ({ data, isLoading }) => {
         <CommentBoxHeader data={data} />
         <article className="flex max-h-96 flex-col gap-y-4 overflow-y-auto">
           {data?.comments.map((comment: CommentData) => (
-            <CommentBoxCard key={comment.id} data={comment} />
+            <CommentBoxCard key={comment.id} data={comment} isLoading={isLoading} />
           ))}
         </article>
       </div>

@@ -1,16 +1,15 @@
 import { Skeleton } from "@/components/ui/skeleton";
 import { MediaPlayerProps } from "@/types/homeTypes";
-import { FC, useEffect } from "react";
+import { FC } from "react";
 import MediaPlayerContent from "./MediaPlayerContent/MediaPlayerContent";
 
 const MediaPlayer: FC<MediaPlayerProps> = ({ data, isLoading }) => {
+  if (isLoading)
+    return <Skeleton className="h-full w-full rounded-xl bg-skeleton-1" />;
+
   return (
     <section className="col-span-2 px-4">
-      {isLoading ? (
-        <Skeleton className="bg-skeleton-1 h-full w-full rounded-xl" />
-      ) : (
-        <MediaPlayerContent data={data} />
-      )}
+      <MediaPlayerContent data={data} />
     </section>
   );
 };

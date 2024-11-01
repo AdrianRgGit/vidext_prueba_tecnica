@@ -1,8 +1,12 @@
 import CustomAvatar from "@/components/CustomElements/CustomAvatar/CustomAvatar";
+import { Skeleton } from "@/components/ui/skeleton";
 import { CommentBoxCardProps } from "@/types/homeTypes";
 import { FC } from "react";
 
-const CommentBoxCard: FC<CommentBoxCardProps> = ({ data }) => {
+const CommentBoxCard: FC<CommentBoxCardProps> = ({ data, isLoading }) => {
+  if (isLoading)
+    return <Skeleton className="h-20 w-full overflow-y-hidden bg-skeleton-1" />;
+
   return (
     <div className="flex items-center gap-x-2">
       <CustomAvatar width="min-w-16" src={data?.avatar} />

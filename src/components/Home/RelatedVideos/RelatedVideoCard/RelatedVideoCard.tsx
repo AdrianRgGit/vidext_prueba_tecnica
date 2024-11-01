@@ -1,3 +1,4 @@
+import { Skeleton } from "@/components/ui/skeleton";
 import { RelatedVideosChildProps } from "@/types/homeTypes";
 import Image from "next/image";
 import React, { FC } from "react";
@@ -5,7 +6,11 @@ import React, { FC } from "react";
 const RelatedVideoCard: FC<RelatedVideosChildProps> = ({
   video,
   setSelectedVideo,
+  isLoading,
 }) => {
+  if (isLoading)
+    return <Skeleton className="mt-8 h-32 w-full bg-skeleton-1" />;
+
   return (
     <button
       type="button"

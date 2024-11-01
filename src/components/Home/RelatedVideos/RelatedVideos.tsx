@@ -18,8 +18,6 @@ const RelatedVideos: FC<RelatedVideosProps> = ({
     setVisibleCount(3);
   };
 
-  if (isLoading) return <p>Loading related videos...</p>;
-
   return (
     <section className="rounded-xl px-2 py-8">
       <h3 className="mb-8 text-xl">Videos relacionados</h3>
@@ -33,11 +31,12 @@ const RelatedVideos: FC<RelatedVideosProps> = ({
                 key={video.id}
                 video={video}
                 setSelectedVideo={setSelectedVideo}
+                isLoading={isLoading}
               />
             ))}
         </div>
 
-        {data && visibleCount < data?.length ? (
+        {!isLoading && data && visibleCount < data?.length ? (
           <Button
             onClick={handleLoadMore}
             className="w-full bg-secondary-1 py-6 hover:bg-secondary-1/80"
