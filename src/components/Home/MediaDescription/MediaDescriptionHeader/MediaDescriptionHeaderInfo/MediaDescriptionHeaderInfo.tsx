@@ -1,11 +1,20 @@
+import { trpc } from "@/app/_trpc/client";
 import { Button } from "@/components/ui/button";
 import { MediaDescriptionChildProps } from "@/types/homeTypes";
 import { Eye, Heart, Share2 } from "lucide-react";
-import { FC } from "react";
+import { FC, useState } from "react";
 
 const MediaDescriptionHeaderInfo: FC<MediaDescriptionChildProps> = ({
   data,
 }) => {
+  const [isLiking, setIsLiking] = useState(false);
+  const likeVideo = trpc.likeVideo.useMutation();
+
+  const handleLike = () => {
+    setIsLiking(true);
+    likeVideo.mutate({ videoId: data?.id });
+  };
+
   return (
     <article className="flex items-center gap-x-8">
       <div className="flex items-center gap-x-4">
@@ -21,23 +30,15 @@ const MediaDescriptionHeaderInfo: FC<MediaDescriptionChildProps> = ({
 
       <div className="flex gap-x-2">
         <Button
-          onClick={() => {
-            window.alert(
-              "Funcionalidad no disponible, disculpen las molestias",
-            );
-          }}
+          onClick={() => handleLike()}
           className="flex w-28 items-center justify-center gap-x-2 bg-red-1 hover:bg-red-1/80"
         >
-          <Heart />
+          <Heart fill={isLiking ? "white" : "none"} />
           <p>Like</p>
         </Button>
 
         <Button
-          onClick={() => {
-            window.alert(
-              "Funcionalidad no disponible, disculpen las molestias",
-            );
-          }}
+          disabled
           className="flex w-28 items-center justify-center gap-x-2 bg-sky-1 hover:bg-sky-1/80"
         >
           <Share2 />
