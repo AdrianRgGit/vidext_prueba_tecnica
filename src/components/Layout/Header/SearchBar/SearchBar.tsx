@@ -24,7 +24,7 @@ const SearchBar = () => {
   };
 
   return (
-    <article className="lg:w-1/2">
+    <article className="order-2 mt-3 w-full lg:order-1 lg:mt-0 lg:w-1/2">
       <Form {...searchForm}>
         <form onSubmit={searchForm.handleSubmit(onSubmit)}>
           <CustomInputField

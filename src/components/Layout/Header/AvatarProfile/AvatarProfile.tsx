@@ -5,7 +5,7 @@ import { FC } from "react";
 
 const AvatarProfile: FC<AvatarProfileProps> = ({ data }) => {
   return (
-    <article className="flex items-center gap-x-8">
+    <article className="order-1 flex w-full items-center gap-x-8 lg:order-2 lg:w-auto">
       <div className="flex items-center gap-x-2">
         <CustomAvatar width="w-12" height="h-auto" src={data?.avatar} />
 

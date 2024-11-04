@@ -6,9 +6,9 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 const Header: FC<HeaderProps> = ({ data, isLoading }) => {
   return (
-    <header className="flex items-center justify-between px-4 py-2 lg:col-span-3">
+    <header className="flex flex-col items-center justify-between px-4 py-2 lg:col-span-3 lg:flex-row">
       {isLoading ? (
-        <Skeleton className="h-10 rounded-md bg-skeleton-1 lg:w-1/2" />
+        <Skeleton className="h-10 w-full rounded-md bg-skeleton-1 lg:w-1/2" />
       ) : (
         <SearchBar />
       )}
