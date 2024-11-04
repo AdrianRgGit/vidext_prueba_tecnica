@@ -9,6 +9,7 @@ import SideNav from "@/components/Layout/SideNav/SideNav";
 import { useEffect, useState } from "react";
 import { trpc } from "./_trpc/client";
 import { Skeleton } from "@/components/ui/skeleton";
+import SideNavPhone from "@/components/Layout/SideNavPhone/SideNavPhone";
 
 export default function Home() {
   const [user, setUsers] = useState(null);
@@ -44,8 +45,15 @@ export default function Home() {
 
   return (
     <>
-      <SideNav />
-      <main className="ml-20 grid grid-cols-1 grid-rows-[6rem_32rem] lg:grid-cols-3">
+      <div className="hidden lg:block">
+        <SideNav />
+      </div>
+
+      <div className="block lg:hidden">
+        <SideNavPhone />
+      </div>
+
+      <main className="grid grid-cols-1 grid-rows-[6rem_32rem] lg:ml-20 lg:grid-cols-3">
         <Header data={user} isLoading={loadingUser} />
 
         {videoSelected && !isLoading ? (
