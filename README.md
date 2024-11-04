@@ -13,6 +13,7 @@
 - [Estructura del proyecto](#estructura-del-proyecto)
 - [Mejoras futuras](#mejoras-futuras)
 - [Comandos útiles](#comandos-útiles)
+  - [Aplicación](#aplicación) 
   - [Prisma](#prisma)
 
 ## Resumen
