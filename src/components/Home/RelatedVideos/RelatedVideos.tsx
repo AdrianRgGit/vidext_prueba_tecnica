@@ -5,7 +5,6 @@ import { RelatedVideosProps } from "@/types/homeTypes";
 
 const RelatedVideos: FC<RelatedVideosProps> = ({
   data,
-  isLoading,
   setSelectedVideo,
 }) => {
   const [visibleCount, setVisibleCount] = useState(3);
@@ -31,12 +30,12 @@ const RelatedVideos: FC<RelatedVideosProps> = ({
                 key={video.id}
                 video={video}
                 setSelectedVideo={setSelectedVideo}
-                isLoading={isLoading}
+
               />
             ))}
         </div>
 
-        {!isLoading && data && visibleCount < data?.length ? (
+        {data && visibleCount < data?.length ? (
           <Button
             onClick={handleLoadMore}
             className="w-full bg-secondary-1 py-6 hover:bg-secondary-1/80"

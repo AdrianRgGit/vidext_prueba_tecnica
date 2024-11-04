@@ -3,7 +3,6 @@ import { CommentData, VidData } from "./dataTypes";
 // NOTE: Media Player
 export interface MediaPlayerProps {
   data: VidData | null;
-  isLoading: boolean;
 }
 
 export interface MediaPlayerContentProps {
@@ -13,7 +12,6 @@ export interface MediaPlayerContentProps {
 // NOTE: Comment Box
 export interface CommentBoxProps {
   data: VidData | null;
-  isLoading: boolean;
 }
 
 export interface CommentBoxHeaderProps {
@@ -22,13 +20,11 @@ export interface CommentBoxHeaderProps {
 
 export interface CommentBoxCardProps {
   data: CommentData | null;
-  isLoading: boolean;
 }
 
 // NOTE: Media Description
 export interface MediaDescriptionProps {
   data: VidData | null;
-  isLoading: boolean;
 }
 
 export interface MediaDescriptionChildProps {
@@ -37,11 +33,9 @@ export interface MediaDescriptionChildProps {
 
 export interface RelatedVideosProps {
   data: VidData[] | null;
-  isLoading: boolean;
   setSelectedVideo: (videoId: number) => void;
 }
 export interface RelatedVideosChildProps {
   video: VidData | null;
   setSelectedVideo: (videoId: number) => void;
-  isLoading: boolean;
 }

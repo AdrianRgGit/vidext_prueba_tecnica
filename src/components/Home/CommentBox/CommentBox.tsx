@@ -5,19 +5,16 @@ import { Send } from "lucide-react";
 import { FC } from "react";
 import { CommentBoxProps } from "@/types/homeTypes";
 import { CommentData } from "@/types/dataTypes";
+import { Skeleton } from "@/components/ui/skeleton";
 
-const CommentBox: FC<CommentBoxProps> = ({ data, isLoading }) => {
+const CommentBox: FC<CommentBoxProps> = ({ data }) => {
   return (
     <section className="mx-2 flex flex-col justify-between rounded-xl bg-primary-2 px-4">
       <div>
         <CommentBoxHeader data={data} />
         <article className="flex max-h-96 flex-col gap-y-4 overflow-y-auto">
           {data?.comments.map((comment: CommentData) => (
-            <CommentBoxCard
-              key={comment.id}
-              data={comment}
-              isLoading={isLoading}
-            />
+            <CommentBoxCard key={comment.id} data={comment} />
           ))}
         </article>
       </div>

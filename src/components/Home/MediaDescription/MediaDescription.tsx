@@ -3,7 +3,7 @@ import MediaDescriptionContent from "./MediaDescriptionContent/MediaDescriptionC
 import MediaDescriptionHeader from "./MediaDescriptionHeader/MediaDescriptionProfile";
 import { MediaDescriptionProps } from "@/types/homeTypes";
 
-const MediaDescription: FC<MediaDescriptionProps> = ({ data, isLoading }) => {
+const MediaDescription: FC<MediaDescriptionProps> = ({ data }) => {
   return (
     <section className="col-span-2 px-4 py-8">
       <MediaDescriptionHeader data={data} />

@@ -48,21 +48,25 @@ export default function Home() {
       <main className="ml-20 grid grid-cols-1 grid-rows-[6rem_32rem] lg:grid-cols-3">
         <Header data={user} isLoading={loadingUser} />
 
-        {videoSelected ? (
+        {videoSelected && !isLoading ? (
           <>
-            <MediaPlayer data={videoSelected} isLoading={isLoading} />
-            <CommentBox data={videoSelected} isLoading={isLoading} />
-            <MediaDescription data={videoSelected} isLoading={isLoading} />
+            <MediaPlayer data={videoSelected} />
+            <CommentBox data={videoSelected} />
+            <MediaDescription data={videoSelected} />
           </>
         ) : (
-          <Skeleton className="h-full w-full rounded-xl bg-skeleton-1" />
+          <>
+            <Skeleton className="col-span-2 mx-4 bg-skeleton-1" />
+            <Skeleton className="mx-4 rounded-xl bg-skeleton-1" />
+            <Skeleton className="col-span-2 mx-4 my-8 h-64 bg-skeleton-1" />
+          </>
         )}
 
-        <RelatedVideos
-          data={videos}
-          isLoading={isLoading}
-          setSelectedVideo={setSelectedVideo}
-        />
+        {!isLoading ? (
+          <RelatedVideos data={videos} setSelectedVideo={setSelectedVideo} />
+        ) : (
+          <Skeleton className="mx-2 my-8 h-64 rounded-xl bg-skeleton-1" />
+        )}
       </main>
     </>
   );

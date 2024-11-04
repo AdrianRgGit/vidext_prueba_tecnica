@@ -2,14 +2,18 @@ import { trpc } from "@/app/_trpc/client";
 import { Button } from "@/components/ui/button";
 import { MediaDescriptionChildProps } from "@/types/homeTypes";
 import { Eye, Heart, Share2 } from "lucide-react";
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 
 const MediaDescriptionHeaderInfo: FC<MediaDescriptionChildProps> = ({
   data,
 }) => {
-  const [likes, setLikes] = useState(data?.likes || 0); // Estado para manejar el número de likes
+  const [likes, setLikes] = useState(data?.likes || 0);
   const [isLiking, setIsLiking] = useState(false);
   const likeVideo = trpc.likeVideo.useMutation();
+
+  useEffect(() => {
+    setLikes(data?.likes || 0);
+  }, [data?.likes]);
 
   const handleLike = () => {
     setIsLiking(true);

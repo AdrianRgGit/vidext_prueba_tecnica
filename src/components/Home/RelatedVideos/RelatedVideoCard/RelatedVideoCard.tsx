@@ -1,4 +1,3 @@
-import { Skeleton } from "@/components/ui/skeleton";
 import { RelatedVideosChildProps } from "@/types/homeTypes";
 import Image from "next/image";
 import React, { FC } from "react";
@@ -6,11 +5,7 @@ import React, { FC } from "react";
 const RelatedVideoCard: FC<RelatedVideosChildProps> = ({
   video,
   setSelectedVideo,
-  isLoading,
 }) => {
-  if (isLoading)
-    return <Skeleton className="mt-8 h-32 w-full bg-skeleton-1" />;
-
   return (
     <button
       type="button"
@@ -30,10 +25,14 @@ const RelatedVideoCard: FC<RelatedVideosChildProps> = ({
       <div className="flex flex-col">
         <div className="text-left">
           <p>{video?.title}</p>
-          <small className="text-gray-1">{video?.description}</small>
+          <small className="text-gray-1">
+            {video?.description?.length > 200
+              ? `${video.description.slice(0, 120)}...`
+              : video.description}
+          </small>
         </div>
 
-        <div className="flex gap-x-2">
+        <div className="mt-2 flex gap-x-2">
           <small className="text-gray-1">{video?.views} visualizaciones</small>
         </div>
       </div>

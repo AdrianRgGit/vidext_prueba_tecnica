@@ -15,7 +15,7 @@ npx prisma generate
 Seed (configured script in package.json)
 
 ```bash
-npx run seed
+npm run seed
 ```
 
 Prisma Studio
