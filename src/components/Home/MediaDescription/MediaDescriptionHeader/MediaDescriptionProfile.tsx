@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import MediaDescriptionHeaderProfile from "./MediaDescriptionHeaderProfile/MediaDescriptionHeaderProfile";
 import MediaDescriptionHeaderInfo from "./MediaDescriptionHeaderInfo/MediaDescriptionHeaderInfo";
 import { MediaDescriptionChildProps } from "@/types/homeTypes";

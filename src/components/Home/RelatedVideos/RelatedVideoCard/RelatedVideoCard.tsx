@@ -1,6 +1,6 @@
 import { RelatedVideosChildProps } from "@/types/homeTypes";
 import Image from "next/image";
-import React, { FC } from "react";
+import { FC } from "react";
 
 const RelatedVideoCard: FC<RelatedVideosChildProps> = ({
   video,

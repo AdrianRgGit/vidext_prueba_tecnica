@@ -1,5 +1,5 @@
 import { MediaDescriptionChildProps } from "@/types/homeTypes";
-import React, { FC } from "react";
+import { FC } from "react";
 
 const MediaDescriptionContent: FC<MediaDescriptionChildProps> = ({ data }) => {
   return (

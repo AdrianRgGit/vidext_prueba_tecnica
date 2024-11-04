@@ -1,6 +1,6 @@
 import { trpc } from "@/app/_trpc/client";
 import { MediaPlayerContentProps } from "@/types/homeTypes";
-import React, { FC } from "react";
+import { FC } from "react";
 
 const MediaPlayerContent: FC<MediaPlayerContentProps> = ({ data }) => {
   const viewVideo = trpc.viewVideo.useMutation();

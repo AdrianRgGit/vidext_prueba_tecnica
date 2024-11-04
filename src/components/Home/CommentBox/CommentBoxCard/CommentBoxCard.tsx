@@ -1,5 +1,4 @@
 import CustomAvatar from "@/components/CustomElements/CustomAvatar/CustomAvatar";
-import { Skeleton } from "@/components/ui/skeleton";
 import { CommentBoxCardProps } from "@/types/homeTypes";
 import { FC } from "react";
 

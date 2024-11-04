@@ -1,7 +1,7 @@
 import { HeaderProps } from "@/types/layoutTypes";
 import AvatarProfile from "./AvatarProfile/AvatarProfile";
 import SearchBar from "./SearchBar/SearchBar";
-import React, { FC, useEffect } from "react";
+import React, { FC } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 
 const Header: FC<HeaderProps> = ({ data, isLoading }) => {

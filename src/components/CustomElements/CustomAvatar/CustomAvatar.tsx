@@ -1,6 +1,6 @@
 import { CustomAvatarProps } from "@/types/customElementsTypes";
 import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
-import React, { FC } from "react";
+import { FC } from "react";
 
 const CustomAvatar: FC<CustomAvatarProps> = ({
   width = "w-20",
