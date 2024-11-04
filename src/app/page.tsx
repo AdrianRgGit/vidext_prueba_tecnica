@@ -40,7 +40,6 @@ export default function Home() {
   const setSelectedVideo = (videoId) => {
     const selectedVideo = videos?.find((video) => video.id === videoId);
     setVideoSelected(selectedVideo);
-    console.log(selectedVideo);
   };
 
   return (

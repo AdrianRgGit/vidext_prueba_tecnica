@@ -13,7 +13,11 @@ const CommentBox: FC<CommentBoxProps> = ({ data, isLoading }) => {
         <CommentBoxHeader data={data} />
         <article className="flex max-h-96 flex-col gap-y-4 overflow-y-auto">
           {data?.comments.map((comment: CommentData) => (
-            <CommentBoxCard key={comment.id} data={comment} isLoading={isLoading} />
+            <CommentBoxCard
+              key={comment.id}
+              data={comment}
+              isLoading={isLoading}
+            />
           ))}
         </article>
       </div>
@@ -27,8 +31,7 @@ const CommentBox: FC<CommentBoxProps> = ({ data, isLoading }) => {
         />
         <button
           type="button"
-          className="flex items-center justify-center rounded-full bg-secondary-1 p-3"
-          onClick={() => {window.alert("Funcionalidad no disponible, disculpen las molestias")}}
+          className="flex cursor-not-allowed items-center justify-center rounded-full bg-secondary-1 p-3"
         >
           <Send size={16} fill="white" />
         </button>

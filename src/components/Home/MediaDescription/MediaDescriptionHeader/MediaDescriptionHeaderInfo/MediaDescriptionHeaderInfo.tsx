@@ -7,12 +7,24 @@ import { FC, useState } from "react";
 const MediaDescriptionHeaderInfo: FC<MediaDescriptionChildProps> = ({
   data,
 }) => {
+  const [likes, setLikes] = useState(data?.likes || 0); // Estado para manejar el número de likes
   const [isLiking, setIsLiking] = useState(false);
   const likeVideo = trpc.likeVideo.useMutation();
 
   const handleLike = () => {
     setIsLiking(true);
-    likeVideo.mutate({ videoId: data?.id });
+    likeVideo.mutate(
+      { videoId: data?.id },
+      {
+        onSuccess: (updatedVideo) => {
+          setLikes(updatedVideo.likes);
+        },
+        onError: () => {
+          setIsLiking(false);
+          console.error("Hubo un problema al dar like.");
+        },
+      },
+    );
   };
 
   return (
@@ -24,12 +36,13 @@ const MediaDescriptionHeaderInfo: FC<MediaDescriptionChildProps> = ({
         </div>
         <div className="flex items-center gap-x-2">
           <Heart stroke="gray" />
-          <small className="text-gray-1">{data?.likes}</small>
+          <small className="text-gray-1">{likes}</small>
         </div>
       </div>
 
       <div className="flex gap-x-2">
         <Button
+          type="button"
           onClick={() => handleLike()}
           className="flex w-28 items-center justify-center gap-x-2 bg-red-1 hover:bg-red-1/80"
         >
@@ -38,8 +51,8 @@ const MediaDescriptionHeaderInfo: FC<MediaDescriptionChildProps> = ({
         </Button>
 
         <Button
-          disabled
-          className="flex w-28 items-center justify-center gap-x-2 bg-sky-1 hover:bg-sky-1/80"
+          type="button"
+          className="flex w-28 cursor-not-allowed items-center justify-center gap-x-2 bg-sky-1 hover:bg-sky-1/80"
         >
           <Share2 />
           <p>Share</p>
