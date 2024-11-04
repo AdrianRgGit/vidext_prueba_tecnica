@@ -15,7 +15,7 @@ const RelatedVideos: FC<RelatedVideosProps> = ({ data, setSelectedVideo }) => {
   };
 
   return (
-    <section className="rounded-xl px-2 lg:py-8">
+    <section className="mb-6 rounded-xl px-2 lg:mb-0 lg:py-8">
       <h3 className="mb-8 text-xl">Videos relacionados</h3>
 
       <article className="space-y-4">
