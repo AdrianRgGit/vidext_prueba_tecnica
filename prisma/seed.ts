@@ -105,13 +105,13 @@ async function main() {
       {
         username: "Paco López",
         avatar: "/images/profiles/profile_1.webp",
-        comment: "comment 1",
+        comment: "Loved the comparison!",
         videoId: allVideos[0].id,
       },
       {
         username: "Adrián Ramírez",
         avatar: "/images/profiles/profile_2.webp",
-        comment: "comment 2",
+        comment: "Great video!",
         videoId: allVideos[0].id,
       },
       {

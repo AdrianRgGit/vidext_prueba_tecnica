@@ -3,10 +3,7 @@ import RelatedVideoCard from "./RelatedVideoCard/RelatedVideoCard";
 import { FC, useState } from "react";
 import { RelatedVideosProps } from "@/types/homeTypes";
 
-const RelatedVideos: FC<RelatedVideosProps> = ({
-  data,
-  setSelectedVideo,
-}) => {
+const RelatedVideos: FC<RelatedVideosProps> = ({ data, setSelectedVideo }) => {
   const [visibleCount, setVisibleCount] = useState(3);
 
   const handleLoadMore = () => {
@@ -18,7 +15,7 @@ const RelatedVideos: FC<RelatedVideosProps> = ({
   };
 
   return (
-    <section className="rounded-xl px-2 py-8">
+    <section className="rounded-xl px-2 lg:py-8">
       <h3 className="mb-8 text-xl">Videos relacionados</h3>
 
       <article className="space-y-4">
@@ -30,7 +27,6 @@ const RelatedVideos: FC<RelatedVideosProps> = ({
                 key={video.id}
                 video={video}
                 setSelectedVideo={setSelectedVideo}
-
               />
             ))}
         </div>

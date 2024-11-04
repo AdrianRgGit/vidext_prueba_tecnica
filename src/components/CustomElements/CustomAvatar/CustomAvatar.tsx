@@ -4,7 +4,7 @@ import React, { FC } from "react";
 
 const CustomAvatar: FC<CustomAvatarProps> = ({
   width = "w-20",
-  height = "h-20",
+  height = "h-auto",
   src,
   alt = "avatar",
   fallBack = "AV",
