@@ -32,7 +32,7 @@ const MediaDescriptionHeaderInfo: FC<MediaDescriptionChildProps> = ({
   };
 
   return (
-    <article className="flex items-center gap-x-8">
+    <article className="flex w-full flex-col gap-x-8 gap-y-2 lg:w-auto lg:flex-row lg:items-center lg:gap-y-0">
       <div className="flex items-center gap-x-4">
         <div className="flex items-center gap-x-2">
           <Eye stroke="gray" />

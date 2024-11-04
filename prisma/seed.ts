@@ -144,6 +144,36 @@ async function main() {
         comment: "Excellent explanation.",
         videoId: allVideos[4].id,
       },
+      {
+        username: "Carlos Mendoza",
+        avatar: "https://picsum.photos/60/65",
+        comment: "Incredible content! Learned a lot.",
+        videoId: allVideos[0].id,
+      },
+      {
+        username: "María Torres",
+        avatar: "https://picsum.photos/60/66",
+        comment: "This video was really helpful. Thanks!",
+        videoId: allVideos[0].id,
+      },
+      {
+        username: "Sofía Pérez",
+        avatar: "https://picsum.photos/60/67",
+        comment: "I appreciate the clarity in the explanations.",
+        videoId: allVideos[0].id,
+      },
+      {
+        username: "Javier Ruiz",
+        avatar: "https://picsum.photos/60/68",
+        comment: "Great job! I will definitely apply this knowledge.",
+        videoId: allVideos[0].id,
+      },
+      {
+        username: "Clara Silva",
+        avatar: "https://picsum.photos/60/69",
+        comment: "This is just what I needed for my project.",
+        videoId: allVideos[0].id,
+      },
     ],
   });
 

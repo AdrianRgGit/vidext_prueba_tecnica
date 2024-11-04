@@ -5,7 +5,7 @@ import { MediaDescriptionChildProps } from "@/types/homeTypes";
 
 const MediaDescriptionHeader: FC<MediaDescriptionChildProps> = ({ data }) => {
   return (
-    <div className="mb-4 flex items-center justify-between">
+    <div className="mb-4 flex flex-col items-center justify-between gap-y-4 lg:flex-row lg:gap-y-0">
       <MediaDescriptionHeaderProfile data={data} />
       <MediaDescriptionHeaderInfo data={data} />
     </div>

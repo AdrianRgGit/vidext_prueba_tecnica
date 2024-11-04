@@ -6,7 +6,7 @@ const MediaDescriptionHeaderProfile: FC<MediaDescriptionChildProps> = ({
   data,
 }) => {
   return (
-    <article className="flex items-center gap-x-2">
+    <article className="flex w-full items-center gap-x-2 lg:w-auto">
       <CustomAvatar src={data?.avatar} />
       <div>
         <p>{data?.username}</p>

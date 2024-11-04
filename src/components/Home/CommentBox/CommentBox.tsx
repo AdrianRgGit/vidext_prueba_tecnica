@@ -9,10 +9,10 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 const CommentBox: FC<CommentBoxProps> = ({ data }) => {
   return (
-    <section className="mx-2 flex flex-col justify-between rounded-xl bg-primary-2 px-4">
+    <section className="mx-2 flex flex-col justify-between rounded-xl bg-primary-2 px-4 lg:h-auto">
       <div>
         <CommentBoxHeader data={data} />
-        <article className="flex max-h-96 flex-col gap-y-4 overflow-y-auto">
+        <article className="mb-2 flex max-h-96 flex-col gap-y-4 overflow-y-auto">
           {data?.comments.map((comment: CommentData) => (
             <CommentBoxCard key={comment.id} data={comment} />
           ))}

@@ -64,7 +64,7 @@ export default function Home() {
           </>
         ) : (
           <>
-            <Skeleton className="col-span-2 mx-4 bg-skeleton-1" />
+            <Skeleton className="col-span-2 mx-4 my-6 bg-skeleton-1 lg:my-0" />
             <Skeleton className="mx-4 rounded-xl bg-skeleton-1" />
             <Skeleton className="col-span-2 mx-4 my-8 h-64 bg-skeleton-1" />
           </>

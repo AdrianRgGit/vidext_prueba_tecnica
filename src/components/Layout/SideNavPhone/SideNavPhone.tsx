@@ -16,7 +16,7 @@ const SideNav = () => {
     clearTimeout(scrollTimer);
     scrollTimer = setTimeout(() => {
       setShowButton(false);
-    }, 1000);
+    }, 2000);
   };
 
   useEffect(() => {
