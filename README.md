@@ -109,9 +109,9 @@ http://localhost:3000
 
 - Mejor uso de Shadcn. Aunque lo he utilizado en la aplicación, sé que esta biblioteca tiene mucho potencial y podría hacer la mayoría de componentes con ella y así dar más seguridad y optimización a mi proyecto. Debido a todo lo ocurrido, no tuve mucho tiempo de indagar a fondo en esta biblioteca, lo cual he utilizado lo más básico (aunque funcional) y otros componentes los he hecho yo mismo.
 
-- Manejo de Errores Mejorado: Proveer mensajes de error más amigables y un sistema de logging detallado para facilitar la depuración.
+- Manejo de Errores Mejorado. Proveer mensajes de error más amigables y un sistema de logging detallado para facilitar la depuración.
 
-- Accesibilidad: Asegurar que el reproductor y otros componentes sean accesibles mediante mejoras en la navegación por teclado.
+- Accesibilidad. Asegurar que el reproductor y otros componentes sean accesibles mediante mejoras en la navegación por teclado.
 
 ## Comandos útiles
 
@@ -143,6 +143,6 @@ npm run seed
 
 Prisma Studio
 
-```
+```bash
 npx prisma studio
 ```
