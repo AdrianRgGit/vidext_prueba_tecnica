@@ -9,7 +9,11 @@ const RelatedVideoCard: FC<RelatedVideosChildProps> = ({
   return (
     <button
       type="button"
-      onClick={() => setSelectedVideo(video?.id)}
+      onClick={() => {
+        if (video?.id !== undefined) {
+          setSelectedVideo(video.id);
+        }
+      }}
       className="flex gap-x-4"
     >
       <picture className="h-32 max-w-32">
@@ -26,9 +30,9 @@ const RelatedVideoCard: FC<RelatedVideosChildProps> = ({
         <div className="text-left">
           <p>{video?.title}</p>
           <small className="text-gray-1">
-            {video?.description?.length > 200
+            {video?.description && video.description.length > 200
               ? `${video.description.slice(0, 120)}...`
-              : video.description}
+              : video?.description}
           </small>
         </div>
 

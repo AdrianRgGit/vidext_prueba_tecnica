@@ -10,13 +10,14 @@ import { useEffect, useState } from "react";
 import { trpc } from "./_trpc/client";
 import { Skeleton } from "@/components/ui/skeleton";
 import SideNavPhone from "@/components/Layout/SideNavPhone/SideNavPhone";
+import { VidData } from "@/types/dataTypes";
 
 export default function Home() {
   const [user, setUsers] = useState(null);
-  const [videoSelected, setVideoSelected] = useState(null);
+  const [videoSelected, setVideoSelected] = useState<VidData | null>(null);
   const [loadingUser, setLoadingUser] = useState(false);
 
-  const { data: videos, isLoading, error } = trpc.getVideos.useQuery();
+  const { data: videos, isLoading } = trpc.getVideos.useQuery();
 
   useEffect(() => {
     setLoadingUser(true);
@@ -33,13 +34,13 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    if (videos?.length > 0) {
+    if (videos && videos?.length > 0) {
       setVideoSelected(videos[0]);
     }
   }, [videos]);
 
-  const setSelectedVideo = (videoId) => {
-    const selectedVideo = videos?.find((video) => video.id === videoId);
+  const setSelectedVideo = (videoId: number) => {
+    const selectedVideo = videos?.find((video) => video.id === videoId) || null;
     setVideoSelected(selectedVideo);
   };
 
@@ -71,7 +72,10 @@ export default function Home() {
         )}
 
         {!isLoading ? (
-          <RelatedVideos data={videos} setSelectedVideo={setSelectedVideo} />
+          <RelatedVideos
+            data={videos || null}
+            setSelectedVideo={setSelectedVideo}
+          />
         ) : (
           <Skeleton className="mx-2 my-8 h-64 rounded-xl bg-skeleton-1" />
         )}

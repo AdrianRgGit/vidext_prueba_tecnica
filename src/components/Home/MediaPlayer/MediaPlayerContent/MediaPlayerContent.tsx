@@ -5,7 +5,14 @@ import { FC } from "react";
 const MediaPlayerContent: FC<MediaPlayerContentProps> = ({ data }) => {
   const viewVideo = trpc.viewVideo.useMutation();
 
-  const handleViewVideo = () => viewVideo.mutate({ videoId: data?.id });
+  const handleViewVideo = () => {
+    if (data?.id !== undefined) {
+      viewVideo.mutate({ videoId: data.id });
+    } else {
+      console.error("El ID del video es indefinido.");
+    }
+  };
+
   return (
     <div className="relative h-full">
       <video

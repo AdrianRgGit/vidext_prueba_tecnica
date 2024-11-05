@@ -16,19 +16,23 @@ const MediaDescriptionHeaderInfo: FC<MediaDescriptionChildProps> = ({
   }, [data?.likes]);
 
   const handleLike = () => {
-    setIsLiking(true);
-    likeVideo.mutate(
-      { videoId: data?.id },
-      {
-        onSuccess: (updatedVideo) => {
-          setLikes(updatedVideo.likes);
+    if (data?.id !== undefined) {
+      setIsLiking(true);
+      likeVideo.mutate(
+        { videoId: data.id },
+        {
+          onSuccess: (updatedVideo) => {
+            setLikes(updatedVideo.likes);
+          },
+          onError: () => {
+            setIsLiking(false);
+            console.error("Hubo un problema al dar like.");
+          },
         },
-        onError: () => {
-          setIsLiking(false);
-          console.error("Hubo un problema al dar like.");
-        },
-      },
-    );
+      );
+    } else {
+      console.error("El ID del video es indefinido.");
+    }
   };
 
   return (

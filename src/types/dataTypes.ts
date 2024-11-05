@@ -7,7 +7,10 @@ export interface UserData {
 }
 
 export interface CommentData {
+  videoId: number;
   id: number;
+  createdAt: string;
+  updatedAt: string;
   username: string;
   avatar: string;
   comment: string;
@@ -15,6 +18,8 @@ export interface CommentData {
 
 export interface VidData {
   id: number;
+  createdAt: string;
+  updatedAt: string;
   username: string;
   avatar: string;
   title: string;
@@ -24,5 +29,5 @@ export interface VidData {
   views: number;
   likes: number;
   followers: number;
-  comments: Comment[];
+  comments: CommentData[];
 }
